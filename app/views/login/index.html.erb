@@ -1,0 +1,13 @@
+<%= form_tag({action: 'index', class: 'form-agrupado', id: 'form-login'}) do %>
+<html>
+<body>
+<div style="margin-left: 350px; margin-top: 50px"><%= image_tag('simgeh.png', height: '163', width: '625')%></div>
+<fieldset style="margin-left: 515px; width: 20%; margin-top: 80px">
+  <legend>Login</legend>
+  <label style="margin-bottom: 10px;" >Usuário:  </label><%= text_field_tag('login[username]', @valores['username']) %><br><br>
+  <label>Senha:  </label><%= password_field_tag('login[password]', @valores['password']) %><br><br>
+  <%= submit_tag('Entrar')%>
+</fieldset>
+</body>
+</html>
+<%end%>
